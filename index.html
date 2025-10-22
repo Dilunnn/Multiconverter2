@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Cool app</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+  <div id="titulo">
+    <h1>Multiconverter</h1>
+  </div>
+
+  <div id="coins">
+    <div>
+      <h2>Coins <i class="fa-solid fa-coins"></i></h2>
+      <label>Put the value</label> <br>
+      <input type="number" id="numbercoins" placeholder="Digite o valor"> <br>
+      <select id="selectcoins">
+        <option value="">Coins</option>
+        <option value="dolar">Dolar(USD)</option>
+        <option value="euro">Euro(EUR)</option>
+        <option value="real">Real(BRL)</option>
+      </select>
+      <br>
+      <button id="coins-button" onclick="coins()">Convert</button>
+    </div>
+    <div id="resultcoins">
+  </div>
+
+  <div id="weight">
+    <h2>Weight <i class="fa-solid fa-weight-hanging"></i></h2>
+    <label>Put the value</label> <br>
+    <input type="number" id="number-weight" placeholder="Digite o valor"><br>
+    <select id="selectweight">
+      <option value="">Weight</option>
+      <option value="T">Ton(T)</option>
+      <option value="KG">Kilogram(KG)</option>
+      <option value="G">Grama (G)</option> <option value="MG">Miligram(MG)</option>
+    </select>
+    <br>
+    <button id="weight-button" onclick="weight()">Convert</button>
+    <div id="resultweight"> </div>
+  </div>
+
+  <div id="temperature">
+    <h2>Temperature <i class="fa-solid fa-temperature-high"></i></h2>
+    <label>Put the value</label> <br>
+    <input type="number" id="number-temperature" placeholder="Digite o valor"><br>
+    <select id="selecttemperature">
+      <option value="">Temperature</option>
+      <option value="Fahrenheit">Fahrenheit</option>
+      <option value="Kelvin">Kelvin</option>
+      <option value="Celsius">Celsius</option>
+    </select>
+    <br>
+    <button id="temperature-button" onclick="temperature()">Convert</button>
+    <div id="resulttemperature"> </div>
+  </div>
+
+  <footer>
+    <p>Created by Rodrigo Viana and João Pedro © 2025</a></p>
+  </footer>
+</body>
+   <!-- Sabino? kakak -->
+    <!-- e num é n? -->
+  <!--tenta colocar comentarios se for mexer pq no documento ela ta pedindo-->
+</html>

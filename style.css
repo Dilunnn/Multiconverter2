@@ -1,0 +1,46 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+#titulo {
+  padding: 60px;
+  border-radius: 10px;
+  background-image: linear-gradient(to bottom, #ed333b, #c01c28);
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
+}
+
+#coins,#weight,#temperature {
+  padding: 10px;
+  border-radius: 10px;
+  font-family: sans-serif;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  margin: 10px;
+}
+
+footer {
+  text-align : center;
+  font-family : sans-serif;
+  padding : 10px;
+  background-image: linear-gradient(to bottom, #ed333b, #c01c28);
+  color : white;
+  border-radius : 10px;
+  margin : 10px;
+}
+
+button {
+  padding: 10px;
+  background-color: #c01c28;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  align-items:center;
+}
+
+button:hover {
+  opacity: 0.9;
+}
