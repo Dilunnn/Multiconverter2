@@ -4,9 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Cool app</title>
+  <title>Multiconverter</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
-  <script src="script.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
@@ -15,58 +14,119 @@
     <h1>Multiconverter</h1>
   </div>
 
-  <div id="coins">
-    <div>
-      <h2>Coins <i class="fa-solid fa-coins"></i></h2>
-      <label>Put the value</label> <br>
-      <input type="number" id="numbercoins" placeholder="Digite o valor"> <br>
-      <select id="selectcoins">
-        <option value="">Coins</option>
-        <option value="dolar">Dolar(USD)</option>
-        <option value="euro">Euro(EUR)</option>
-        <option value="real">Real(BRL)</option>
-      </select>
-      <br>
-      <button id="coins-button" onclick="coins()">Convert</button>
+  <div id="coins" class="converter-box">
+    <h2>Coins <i class="fa-solid fa-coins"></i></h2>
+    <label>Value:</label>
+    <input type="number" id="number-coins" placeholder="Enter the value">
+
+    <div class="converter-controls">
+      <div class="control-group">
+        <label>From:</label>
+        <select id="selectCoinsFrom">
+          <option value="">Select</option>
+          <option value="BRL">Real (BRL)</option>
+          <option value="USD">Dollar (USD)</option>
+          <option value="EUR">Euro (EUR)</option>
+        </select>
+      </div>
+
+      <button class="swap-btn" onclick="swapUnits('coins')">
+        <i class="fa-solid fa-right-left"></i>
+      </button>
+
+      <div class="control-group">
+        <label>Para:</label>
+        <select id="selectCoinsTo">
+          <option value="">Selecionar</option>
+          <option value="BRL">Real (BRL)</option>
+          <option value="USD">Dólar (USD)</option>
+          <option value="EUR">Euro (EUR)</option>
+        </select>
+      </div>
     </div>
-    <div id="resultcoins">
+
+    <button id="coins-button" onclick="convertCoins()">Converter</button>
+    <div id="resultcoins" class="result-box"></div>
   </div>
 
-  <div id="weight">
-    <h2>Weight <i class="fa-solid fa-weight-hanging"></i></h2>
-    <label>Put the value</label> <br>
-    <input type="number" id="number-weight" placeholder="Digite o valor"><br>
-    <select id="selectweight">
-      <option value="">Weight</option>
-      <option value="T">Ton(T)</option>
-      <option value="KG">Kilogram(KG)</option>
-      <option value="G">Grama (G)</option> <option value="MG">Miligram(MG)</option>
-    </select>
-    <br>
-    <button id="weight-button" onclick="weight()">Convert</button>
-    <div id="resultweight"> </div>
+  <div id="weight" class="converter-box">
+    <h2>Peso <i class="fa-solid fa-weight-hanging"></i></h2>
+    <label>Valor:</label>
+    <input type="number" id="number-weight" placeholder="Digite o valor">
+
+    <div class="converter-controls">
+      <div class="control-group">
+        <label>De:</label>
+        <select id="selectWeightFrom">
+          <option value="">Selecionar</option>
+          <option value="T">Tonelada (T)</option>
+          <option value="KG">Quilograma (KG)</option>
+          <option value="G">Grama (G)</option>
+          <option value="MG">Miligrama (MG)</option>
+        </select>
+      </div>
+
+      <button class="swap-btn" onclick="swapUnits('weight')">
+        <i class="fa-solid fa-right-left"></i>
+      </button>
+
+      <div class="control-group">
+        <label>Para:</label>
+        <select id="selectWeightTo">
+          <option value="">Selecionar</option>
+          <option value="T">Tonelada (T)</option>
+          <option value="KG">Quilograma (KG)</option>
+          <option value="G">Grama (G)</option>
+          <option value="MG">Miligrama (MG)</option>
+        </select>
+      </div>
+    </div>
+
+    <button id="weight-button" onclick="convertWeight()">Converter</button>
+    <div id="resultweight" class="result-box"></div>
   </div>
 
-  <div id="temperature">
-    <h2>Temperature <i class="fa-solid fa-temperature-high"></i></h2>
-    <label>Put the value</label> <br>
-    <input type="number" id="number-temperature" placeholder="Digite o valor"><br>
-    <select id="selecttemperature">
-      <option value="">Temperature</option>
-      <option value="Fahrenheit">Fahrenheit</option>
-      <option value="Kelvin">Kelvin</option>
-      <option value="Celsius">Celsius</option>
-    </select>
-    <br>
-    <button id="temperature-button" onclick="temperature()">Convert</button>
-    <div id="resulttemperature"> </div>
+  <div id="temperature" class="converter-box">
+    <h2>Temperatura <i class="fa-solid fa-temperature-high"></i></h2>
+    <label>Valor:</label>
+    <input type="number" id="number-temperature" placeholder="Digite o valor">
+
+    <div class="converter-controls">
+      <div class="control-group">
+        <label>De:</label>
+        <select id="selectTempFrom">
+          <option value="">Selecionar</option>
+          <option value="C">Celsius (°C)</option>
+          <option value="F">Fahrenheit (°F)</option>
+          <option value="K">Kelvin (K)</option>
+        </select>
+      </div>
+
+      <button class="swap-btn" onclick="swapUnits('temp')">
+        <i class="fa-solid fa-right-left"></i>
+      </button>
+
+      <div class="control-group">
+        <label>Para:</label>
+        <select id="selectTempTo">
+          <option value="">Selecionar</option>
+          <option value="C">Celsius (°C)</option>
+          <option value="F">Fahrenheit (°F)</option>
+          <option value="K">Kelvin (K)</option>
+        </select>
+      </div>
+    </div>
+
+    <button id="temperature-button" onclick="convertTemperature()">Converter</button>
+    <div id="resulttemperature" class="result-box"></div>
   </div>
 
   <footer>
-    <p>Created by Rodrigo Viana and João Pedro © 2025</a></p>
+    <p>Created by Rodrigo viana and João Pedro</p>
+    <p>Copyright © 2025</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
-   <!-- Sabino? kakak -->
-    <!-- e num é n? -->
-  <!--tenta colocar comentarios se for mexer pq no documento ela ta pedindo-->
+
 </html>
