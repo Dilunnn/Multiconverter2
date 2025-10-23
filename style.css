@@ -13,23 +13,87 @@ html {
 }
 
 #coins,#weight,#temperature {
+  padding: 20px; 
+  border-radius: 10px;
+  font-family: sans-serif;
+  margin: 20px 10px;
+}
+
+/* Adicionei estilos para os controles de conversão */
+.converter-box {
+  margin: 20px auto; /* Centraliza as caixas */
+}
+
+.converter-box label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  
+}
+
+.converter-box input,.converter-box select {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box; /* Garante que o padding não estoure a largura */
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.converter-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.control-group {
+  flex: 1; /* Faz os grupos de select ocuparem espaço */
+}
+
+.swap-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #c01c28;
   padding: 10px;
+  margin: 0 10px;
+  align-self: flex-end; /* Alinha o botão com os selects */
+}
+
+.swap-btn:hover {
+  opacity: 0.7;
+}
+
+#coins,#weight,#temperature {
+  padding: 20px; /* Aumentei o padding original para ficar melhor */
   border-radius: 10px;
   font-family: sans-serif;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-  margin: 10px;
+  box-sizing: border-box;
 }
+
+.result-box {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  min-height: 1.5em; /* Define uma altura mínima para não "pular" */
+}
+
 
 footer {
-  text-align : center;
-  font-family : sans-serif;
-  padding : 10px;
+  text-align: center;
+  font-family: sans-serif;
+  padding: 20px;
   background-image: linear-gradient(to bottom, #ed333b, #c01c28);
-  color : white;
-  border-radius : 10px;
-  margin : 10px;
+  color: white;
+  border-radius: 10px;
 }
 
+/* O estilo do botão que você já tinha */
 button {
   padding: 10px;
   background-color: #c01c28;
@@ -38,7 +102,7 @@ button {
   border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
-  align-items:center;
+  align-items: center;
 }
 
 button:hover {
